@@ -1,0 +1,122 @@
+  
+{% extends "base.template" %}
+{% block content %}
+
+  <section class="profile container">
+    <div class="intro">
+      <h2>Add your Cheever profile</h2>
+      <img src="{{ cheever.imgUrl }}" />
+    </div>
+
+    <!-- Content -->
+
+    <section class="content">
+      <section class="profile-edit">
+        <div class="profile-info">
+          <h2><i class="fa fa-edit"></i> My Profile</h2>
+
+          <div class="profile-info-body">
+            <form name="edit-user" method="post" action="/profile">
+              <div class="username">
+                <label>Username:</label>
+                <input type="text" name="username" value="{{ cheever.username }}"></input>
+              </div>
+
+              <div class="email">
+                <label>Email:</label>
+                <input type="email" name="notifyEmail" value="{{ cheever.notifyEmail }}"></input>
+              </div>
+
+              <div class="bio">
+                <label>Bio:</label>
+                <textarea name="bio">{{ cheever.bio }}</textarea>
+              </div>
+
+              <div class="following">
+                <label>Following:</label>
+                <ul>
+                  
+                </ul>
+              </div>
+
+              <button type="submit">Update</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="add-new">
+          <h2><i class="fa fa-plus"></i> Add New Achievement</h2>
+
+          <div class="add-new-body">
+            <form name="add-new" method="post" action="/newAchievement">
+              <div class="name">
+                <label>Name:</label>
+                <input type="text" name="title" value="New Achievement"></input>
+              </div>
+
+              <div class="category">
+                <label>Category:</label>
+                <input type="text" name="category"></input>
+              </div>
+
+              <div class="description">
+                <label>Description:</label>
+                <textarea name="description"></textarea>
+              </div>
+
+              <div class="score">
+                <label>Score:</label>
+                <input type="text" name="score" value="50"></input>
+              </div>
+
+              <button type="submit">Add</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="my-achievements">
+        <h3><i class="fa fa-flag"></i> My Achievements</h3>
+        <ul>
+          <li>
+            <div class="heading">
+              <h4></h4>
+              <div class="stats">
+                <div>
+                  <i class="fa fa-thumbs-up"></i>
+                  <span>()</span>
+                </div>
+                <div>
+                  <i class="fa fa-check"></i>
+                  <span>()</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="info">
+              <p></p>
+
+              <ul>
+                <li>
+                  <span>Contributor:</span>
+                  <span></span>
+                </li>
+                <li>
+                  <span>Category:</span>
+                  <span></span>
+                </li>
+                <li>
+                  <span>Created:</span>
+                  <span></span>
+                </li>
+              </ul>
+
+              <div class="score"></div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </section>
+
+{% endblock %}

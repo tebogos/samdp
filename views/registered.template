@@ -1,0 +1,9 @@
+{% extends "views/base.template" %}
+{% block content %}
+
+<h1>You are already registered </h1>
+<h3>You will get email with the status of your registration</h3>
+<p>Please call 011 494 2326 or email info@samdp.org.za for any queries</p>
+
+{% endblock %}
+

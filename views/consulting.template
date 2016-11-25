@@ -1,0 +1,45 @@
+
+{% extends "views/base.template" %}
+{% block content %}
+
+<div class="container">
+  <div >
+  <ol class="breadcrumb ">
+    <!-- <li><a href="/">Home</a><span class="glyphicon glyphicon-triangle-right"></span></li> -->
+    <li><a href="/">Home</a></li>
+    <li><a href="service">Service</a></li>
+    <li class="active">consulting</li>
+  </ol>
+  </div>
+
+<div class="row">
+  <div class="col-md-6">
+    <h1>Consulting</h1>
+    <br>
+    <img src="images/consulting1.jpg" alt="Buiding" class="img-responsive img-rounded"/>
+    <br>
+    <br>
+    <p>
+      Morula has the expertise in the following:
+    </p>
+    <ul>
+      <li>Overall project management.</li>
+      <li>Project risk assessment.</li>
+      <li>Project risk management.</li>
+      <li>Cost and budget analysis.</li>
+      <li>Technical consulting.</li>
+      <li>Project Health and Safety assessments and advisory.</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+
+</div>
+</div>
+
+{% endblock %}
+

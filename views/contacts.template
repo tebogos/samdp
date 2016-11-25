@@ -1,0 +1,39 @@
+{% extends "views/base.template" %}
+{% block content %}
+<div class="container">
+  <div >
+  <ol class="breadcrumb ">
+    <!-- <li><a href="/">Home</a><span class="glyphicon glyphicon-triangle-right"></span></li> -->
+    <li><a href="/">Home</a></li>
+    <li class="active">contacts</li>
+  </ol>
+  </div>
+  <div class="col-md-6">
+    <h1>Contacts</h1>
+    <br>
+      <div><span class="glyphicon glyphicon-earphone">   +27 11 494 2326</div>
+       <div><span class="glyphicon glyphicon-earphone">   +27 11 494 1830</div>
+
+      <div><span class="glyphicon glyphicon-envelope">   info@samdp.org.za of samdp@icon.co.za</div>
+       <div><span class="glyphicon glyphicon-envelope">  samdp@icon.co.za</div>
+
+      <div><span class="glyphicon glyphicon-print">   +27 11 494 1032</div>
+        <br>
+          <div><span class="glyphicon glyphicon-home"> <br>JHB Expo Center,<br> Cnr Rand show and Nasrec rd,<br> Gate 2, NASREC,<br> Republic South of Africa.
+       <h3>Postal </h3>
+       P.O.Box 277 <br>
+       Mondeor <br>
+       2110 <br>
+       Republic of South Africa
+  </div>
+            <br>
+            <div class="map">
+<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ-53KZwUJlR4RGJZLMnMuFxY&key=AIzaSyCWobK6xh8J6VRGhAItjyCepRFZbVzMmbw" allowfullscreen></iframe>
+
+            </div>
+  </div>
+
+</div>
+<br>
+
+{% endblock %}

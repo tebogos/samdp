@@ -1,0 +1,86 @@
+{% extends "views/base.template" %}
+{% block content %}
+
+<div class="container">
+  <div >
+  <ol class="breadcrumb ">
+    <!-- <li><a href="/">Home</a><span class="glyphicon glyphicon-triangle-right"></span></li> -->
+    <li><a href="/">Home</a></li>
+    <li class="active">about</li>
+  </ol>
+  </div>
+
+<div class="row">
+  <div class="col-md-6">
+    <h1>About</h1>
+
+
+
+ <p>SAMDP is a leading professionally driven health Association that advocates for policy that improves access to quality affordable health care for historically oppressed and disadvantaged communities. SAMDP believes that a primary health care approach should be designed around general practitioners serving in each community.</p>
+
+ <p>SAMDP played an important role in the transformation and the unification of healthcare professionals after 1994 democratic dispensation and continues to advocate the transformation agenda within the profession and the industry.</p>
+<p>SAMDP one thousand five hundred members represents medical and dental practitioners who are general practitioners and specialists working in the public, private, academic and civil society sectors. Four hundred are female practitioners and three hundred are below the age of thirty five.</p>
+<h3>Vision</h3>
+ <p>To foster equity in health</p>
+<h3>Mission</h3>
+<p>We promote health for all in an enabling environment for health professionals and strive for equity throughout the health sector value chain.</p>
+<h3>Values</h3>
+<p>We promote health for all in an enabling environment for health professionals and strive for equity throughout the health sector value chain.</p>
+ <p>Integrity:&nbsp; High professional standards and ethics.</p>
+<p>Leadership:&nbsp; Innovation and knowledge generation</p>
+
+<h3>Strategic Goals</h3>
+<ol>
+<li>To advocate for policies that promote access to quality health for all in particular for the poor and previously disadvantaged.</li>
+<li>To support members in ensuring an enabling environment for the practice of patient centered medicine</li>
+<li>To develop interventions and institutions for mentoring. support and continued professional development of members.</li>
+<li>To collaborate with others in ensuring equity throughout the health sector value chain.</li>
+</ol>
+
+<h3>Aims And Objectives</h3>
+ <p>The aim of the organization is to protect and promote the interests of the members and&nbsp; advancing the roles and interests of the South African Medical and Dental Practitioners , in particular those from and in previously disadvantaged communities.</p>
+<p>The specific objectives of the organization are to:</p>
+<ol>
+<li>Promote and facilitate the delivery of affordable and readily available health services to all citizens with special focus on the poor and disadvantaged communities</li>
+<li>Uphold and maintain high professional and ethical standards of the members of the organization to ensure that the members deliver a quality service to the Public</li>
+<li>Lobby government and other external agencies on behalf of members to protect and advance the professional interests of the members and to contribute to public policy, legislation and regulatory matters within the health sector</li>
+<li>Foster the professional development and advancement of the dental and medical profession by the creation of bursary fund schemes, training interventions and practical training, including the creation and dissemination of journals, newsletters, seminars and conferences; and</li>
+<li> Facilitate the transformation of the health sector throughout the value chain to ensure redress of the past and present inequities as well as to ensure that innovation and research is focused on promoting the overall socio-economic rights of the previously disadvantaged </li>
+</ol>
+
+
+ </div>
+  <div class="col-md-6">
+<br>
+<br>
+<br>
+<br>
+ <img src="https://storage.googleapis.com/samdp-website.appspot.com/images/about/OrganizationalStructure.JPG" alt="Organizational Structure" />
+
+<h3>Executive Committee Memebers</h3>
+<ul>
+       <li>PJ Maelane (Chairperson)</li>
+       <li>TJ Peloakgosi (Secretary)</li>
+       <li>S Khan (Deputy Secretary)</li>
+       <li>ND Munisi (Treasurer)</li>
+       <li>S Gaelejwe</li>
+       <li>E Nkosi</li>
+       <li>TS Tshabangu</li>
+       <li>SBI Lefakane</li>
+       <li>GM Thindisa</li>
+       <li>SJ Modiba</li>
+       <li>M Kgalamono</li>
+       <li>MA Ramasia</li>
+       <li>J Mogaladi</li>
+       <li>MLA Modisane</li>
+       <li>GM Ramokgopa</li>
+       <li>O Setsubi</li>
+
+  </ul>
+
+   </div>
+
+</div>
+</div>
+
+{% endblock %}

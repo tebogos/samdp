@@ -1,0 +1,118 @@
+
+  
+{% extends "views/base.template" %}
+{% block content %}
+
+  <section class="register container">
+    <div class="intro">
+      <h2>Register Member</h2>
+      <!-- <img src="{{ imgUrl }}"  class="circle-img"/> -->
+    </div>
+
+    <!-- Content -->
+
+    <section class="content">
+     
+        <div class="form-wrapper">
+          <h2><i class="fa fa-edit"></i> Fill your info</h2>
+
+          <div class="register-info-body">
+            <form data-toggle="validator" role="form" name="edit-user" method="post" action="/register">
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username"  placeholder="username" name="username" value="{{ doctor.username }}" required></input>
+              </div>
+
+              <div class="form-group">
+                <label for="notifyEmail">Email:</label>
+                <input type="email" id="notifyEmail" class="form-control" name="notifyEmail"  placeholder="Notification Email" value="{{ doctor.notifyEmail }}"  data-error="The email address is invalid" required></input>
+              </div>
+
+              <div class="form-group">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" class="form-control" placeholder="bio" name="bio" >{{ doctor.bio }}</textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="designation">Designation</label>
+              <input type="text" class="form-control" id="designation" placeholder="Designation" name="designation" value="{{ doctor.designation }}" required></input>              
+              </div>
+              <div class="form-group">
+                <label for="field">Field</label>
+                <select class="form-control" id="field" name="field" >
+                 <option value="MD" >MD</option>
+                 <option value="dentist">Dentist</option>
+                </select> 
+              </div>
+              <div class="form-group">
+                <label for="specializatioin">Specializatioin</label>
+                <select class="form-control" id="specializatioin" name="specializatioin" >
+                 <option value="general practitioner" >General Practitioner</option>
+                 <option value="heart surgent">Heart Surgent</option>
+                 <option value="surgent">Surgent</option>
+                </select> 
+              </div>
+              
+              <div class="form-group">
+                <label for="idNumber">Id Number</label>
+              <input type="text" id="idNumber" class="form-control" name="idNumber" value="{{ doctor.idNumber }}" pattern="^[0-9]{13,13}$"  data-error="Invalid ID format" required ></input>              
+              </div>
+  
+               <div class="form-group">
+                  <label for="province">Province</label>
+                  <select class="form-control" id="province" name="province">
+                    <option value="Gauteng">Gauteng</option>
+                    <option value="KZN">KZN</option>
+                    <option value="Cape">Cape</option>
+                    <option value="Northen Cape">Northen Cape</option>
+                    <option value="North West">North West<option>
+                  </select> 
+              </div>
+           
+                <div class="form-group">
+                <label for="city">City</label>
+                <select id="city" class="form-control" name="city">
+                  <option value="Johannesburg">Johannesburg</option>
+                  <option value="Cape Town">Cape Town</option>
+                  <option value="Durban">Durban</option>
+                  <option value="Tshwane">Tshwane</option>
+                </select>
+              </div>
+
+               <div class="form-group">
+                <label for="ethnicGroup">ethnicGroup</label>
+              <select name="ethnicGroup" id="ethnicGroup" class="form-control">
+                <option value="Africa">African</option>
+                <option value="Indian">Indian</option>
+                <option value="Caucasian">Caucasian</option>
+                <option value="Coloured">Coloured</option>
+              </select>       
+              </div>
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender" class="form-control">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+             <div class="form-group">
+               <label for="contactNumber">Contact Number</label>
+               <input type="text" name="contactNumber" id="contactNumber" class="form-control" placeholder="Contact Number" value={{ doctor.contactNumber }}  data-error="Invalid phone format, The phone number must only include digits" pattern="^[\s0-9]{10,12}$"  required></input>
+             </div>
+              <div class="form-group">
+               <label for="mobileNumber">Mobile Number</label>
+               <input type="text" name="mobileNumber" id="mobileNumber" class="form-control" value={{ doctor.mobileNumber }}  data-error="Invalid phone format, The phone number must only include digits" pattern="^[\s0-9]{10,12}$"  required ></input>
+             </div>
+
+                  
+
+              <button type="submit">Update</button>
+            </form>
+          
+        </div>
+
+     </section>
+
+   </section>
+
+{% endblock %}

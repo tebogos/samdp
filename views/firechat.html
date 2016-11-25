@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+	  <head>
+		      <meta charset="utf-8" />
+
+		          <!-- jQuery -->
+			      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+			          <!-- Firebase -->
+				      <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+				          <!-- Firechat -->
+					      <link rel="stylesheet" href="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.css" />
+					          <script src="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.js"></script>
+
+	                  <!-- Bootstrap -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap-modal.min.js"></script>			  <!-- Custom CSS -->
+
+    	    </head>
+
+	      <!--
+	           Example: Anonymous Authentication
+		       This example uses Firebase Simple Login to create "anonymous" user sessions in Firebase,
+		           meaning that user credentials are not required, though a user has a valid Firebase
+			       authentication token and security rules still apply.
+			           Requirements: in order to use this example with your own Firebase, you'll need to do the following:
+				         1. Apply the security rules at https://github.com/firebase/firechat/blob/master/rules.json
+					       2. Enable the "Anonymous" authentication provider in Forge
+					             3. Update the URL below to reference your Firebase
+						           4. Update the room id for auto-entry with a public room you have created
+							      -->
+							        <body>
+									    <div id="firechat-container"></div>
+									        <script type="text/javascript">
+      // Initialize Firebase SDK
+     
+// Get a reference to the Firebase Realtime Database
+var config = {
+	    apiKey: "AIzaSyCt38injCXxS-hpDXWhtD53K6-WblWbOU4",
+	    authDomain: "samdp-website.firebaseapp.com",
+	        databaseURL: "https://samdp-website.firebaseio.com",
+		        storageBucket: "samdp-website.appspot.com",
+			    messagingSenderId: "705607693138"
+				      };
+  firebase.initializeApp(config);
+// Get a reference to the Firebase Realtime Database
+      var chatRef = firebase.database().ref(),
+              target = document.getElementById("firechat-container"),
+	              authModal = $('#auth-modal').modal({ show: false }),
+		              chat = new FirechatUI(chatRef, target);
+    chat.on('auth-required', function() {
+	          authModal.modal('show');
+		        return false;
+			    });
+    firebase.auth().onAuthStateChanged(function(user) {
+	          if (user) {
+			          var userId = user.uid,
+					              username = user.displayName;
+				          chat.setUser(userId, username);
+					          $('#user-name').text(username);
+						          $('#user-info').show();
+							          setTimeout(function() {
+									            chat._chat.enterRoom('-Iy1N3xs4kN8iALHV0QA')
+											            }, 500);
+								        } else {
+										        $('#user-info').hide();
+											        chat._chat.enterRoom('-Iy1N3xs4kN8iALHV0QA')
+													      }
+		      });
+    function login() {
+	          authModal.modal('hide');
+		        // Log the user in via Twitter
+		        var provider = new firebase.auth.TwitterAuthProvider();
+			      firebase.auth().signInWithPopup(provider).catch(function(error) {
+				              console.log("Error authenticating user:", error);
+					            });
+			          }
+    function logout() {
+	          firebase.auth().signOut().then(function() {
+			          location.reload();
+				        }).catch(function(error) {
+			          console.log("Error signing user out:", error);
+				        });
+		      }
+    </script>
+
+     <!-- Twitter / Facebook / Google -->
+       <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+         <div id="fb-root"></div>
+	   <script>
+    (function(d, s, id) {
+	          var js, fjs = d.getElementsByTagName(s)[0];
+		        if (d.getElementById(id)) return;
+			      js = d.createElement(s); js.id = id;
+			            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				          fjs.parentNode.insertBefore(js, fjs);
+					      }(document, 'script', 'facebook-jssdk'));
+    var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37102688-1']);
+	    _gaq.push(['_trackPageview']);
+	        (function() {
+			      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					      })();
+  </script>
+      </body>
+</html>

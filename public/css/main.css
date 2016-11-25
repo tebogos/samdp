@@ -1,0 +1,290 @@
+
+.navbar {
+   background-color: #fff;
+   background: rgba(255,255,255,0.5);
+   border-color: transparent;
+   color: #fff;
+}
+body{
+  padding-top:50px;
+
+
+}
+.special-img 
+{
+   position: relative;
+   top: -5px;
+   float: left;
+   left: -5px;
+		}
+.profile-image {
+  padding-top: 0px;
+  padding-bottom: 0px;
+	}
+
+.left-padding{
+padding: 20px 0 0 20px;
+}
+.clear-left-float{
+clear:left
+}
+.img-float-left {
+ float:left;
+ margin:40px 40px 40px 40px;
+}
+nav a {
+	color:#222
+}
+
+nav  a:hover{
+
+	color:#ff4444
+}
+
+.cuv {
+ background-color:#ff0000;
+ width:1500px;
+ height:150px;
+ border-bottom-left-radius:50%;
+ border-bottom-right-radius:50%
+ }
+.carousel-caption h3 , .carousel-caption p {
+  color: #fff;
+}
+footer h3{
+color: #fff
+}
+footer .social{
+  width: 20px;
+  height: 20px;
+  fill: #aaa;
+
+}
+/*.btn-default, .btn-default:hover, .btn-default:active, .btn-default:visited {
+    background-color: #eeaa44 !important;
+}*/
+footer {
+color: #aaa
+}
+footer a{
+color: #aaa
+}
+footer a:hover{
+color: #fff
+}
+footer{
+  background-color: #4c4c4c
+}
+.footer-div{
+padding-left: 40px
+}
+.navbar  li  { color: #fff }
+.navbar-inverse {
+  color: #fff;
+}
+.corousel {
+  color: #444;
+}
+
+
+.breadcrumb {
+/*padding-left: 100px;*/
+background-color:#fefeff;
+}
+.breadcrumb > li+li:before{
+
+  /*content:none*/
+}
+
+.contact{
+  font-family:Georgia,serif;
+color:#4E443C;
+font-variant: small-caps; text-transform: none; font-weight: 80; margin-bottom: 0;
+font-size: 1.12em;
+}
+.aemail{
+  font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 14px;
+        margin-top: .5em;
+}
+
+/*HEADLINE*/
+h3{
+        font-family:Georgia,serif;
+ color:#4E443C;
+ font-variant: small-caps; text-transform: none; font-weight: 80; margin-bottom: 0;
+ font-size: 1.12em;
+}
+/*PARAGRAPH*/
+p{        font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 14px;
+        margin-top: .5em; color: #666;
+      }
+
+/*PARAGRAPH START */
+???END
+
+.carousel-caption h3 , .carousel-caption p {
+  color: #fff;
+}
+footer h3{
+color: #fff
+}
+footer .social{
+  width: 20px;
+  height: 20px;
+  fill: #aaa;
+
+}
+/*.btn-default, .btn-default:hover, .btn-default:active, .btn-default:visited {
+    background-color: #eeaa44 !important;
+}*/
+footer {
+color: #aaa
+}
+footer a{
+color: #aaa
+}
+footer a:hover{
+color: #fff
+}
+footer{
+  background-color: #4c4c4c
+}
+.footer-div{
+padding-left: 40px
+}
+.navbar  li  { color: #fff }
+.navbar-inverse {
+  color: #fff;
+}
+.corousel {
+  color: #444;
+}
+
+.profile-edit{
+  border: 1px solid;
+  border-radius: 25px;
+  border-color: #ddd;
+  /*outline: 1px solid #ddd;*/
+  padding: 40px;
+  margin-bottom: 80px;
+  width: 600px;
+}
+
+.form-wrapper{
+  border: 1px solid;
+  border-radius: 25px;
+  border-color: #ddd;
+  /*outline: 1px solid #ddd;*/
+  padding: 40px;
+  margin: 80px;  
+  width: 600px;
+
+}
+
+.breadcrumb {
+/*padding-left: 100px;*/
+background-color:#fefeff;
+}
+.breadcrumb > li+li:before{
+
+  /*content:none*/
+}
+
+.contact{
+  font-family:Georgia,serif;
+color:#4E443C;
+font-variant: small-caps; text-transform: none; font-weight: 80; margin-bottom: 0;
+font-size: 1.12em;
+}
+.aemail{
+  font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 14px;
+        margin-top: .5em;
+}
+
+/*HEADLINE*/
+h3{
+        font-family:Georgia,serif;
+ color:#4E443C;
+ font-variant: small-caps; text-transform: none; font-weight: 80; margin-bottom: 0;
+ font-size: 1.12em;
+}
+/*PARAGRAPH*/
+p{        font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 14px;
+        margin-top: .5em; color: #666;
+      }
+
+/*PARAGRAPH START */
+  /*p:first-letter  {      font-family:Georgia,serif;
+ font-size: .8em;
+        font-weight: bold;
+ text-transform:uppercase;
+ letter-spacing:2px;
+}*/
+
+ul{        font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 14px;
+        margin-top: .5em;
+         color: #222;
+        /*list-style-type:none*/
+      }
+
+      h1{
+              font-family:Georgia,serif;
+       color:#4E443C;
+       font-variant: small-caps; text-transform: none; font-weight: 80; margin-bottom: 0;
+       font-size: 3em;
+      }
+
+      /*h1 { color: #7c795d; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0; }*/
+
+
+      h2 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
+
+
+      .subheader { font-size: 20px; font-weight: 300; color: #ffcc66; margin: 0 0 24px; }
+
+
+      /*p { color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 32px; margin: 0 0 24px; }*/
+
+
+      /*a { color: #ff9900; background: #fff4a3; text-decoration: none; }
+
+
+      a:hover { color: #ffcc66 }*/
+
+
+PARAGRAPH CODE
+
+          /*p:first-letter{
+               text-transform: uppercase;
+          } *
+        p {
+        color: #424242;
+        font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+ letter-spacing:0.1em;
+ text-align:center;
+ margin: 40px auto;
+ text-transform: lowercase;
+ line-height: 145%;
+ font-size: 14pt;
+ font-variant: small-caps;
+        }
+
+TWITTER HEADLINE
+
+      h1  {font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+ font-style: italic;
+        color: #424242;}
+
+        a { font-style: normal;
+ font-variant: small-caps;
+ text-decoration: none;
+ color: #afafaf;
+        font-size: 14px;
+        }  
+section.profile{padding-top:0}section.profile div.intro h2{font-size:32px}section.profile section.content{width:100%;margin-right:1.75%}section.profile section.content section.profile-edit{margin-bottom:20px}section.profile section.content section.profile-edit>div{display:inline-block;float:left;width:48.5%;margin-right:3%;margin-bottom:10px;border:1px solid #ebebeb;border-radius:4px;box-shadow:1px 1px 2px 0 rgba(0,0,0,0.05);overflow:hidden}section.profile section.content section.profile-edit>div>h2{margin:0;padding:15px 20px;font-size:18px;background-color:#f9f9f9}section.profile section.content section.profile-edit>div>h2 i{margin-right:5px;font-size:20px;color:#444}section.profile section.content section.profile-edit>div>div{min-height:570px;padding:20px}section.profile section.content section.profile-edit>div>div div{margin-bottom:20px;font-size:14px}section.profile section.content section.profile-edit>div>div div h4{font-size:14px;color:#f90}section.profile section.content section.profile-edit>div>div div.following ul{min-height:56px;overflow:hidden}section.profile section.content section.profile-edit>div>div div.following ul li{display:inline-block;float:left;margin-right:4px;margin-bottom:4px;font-size:12px;line-height:1;background-color:#f6f6f6;border:1px solid #efefef;border-radius:3px;padding:5px}section.profile section.content section.profile-edit>div>div div.score{margin-bottom:40px}section.profile section.content section.profile-edit>div:last-child{margin-right:0}section.profile section.content section.my-achievements{margin-bottom:10px;border:1px solid #ebebeb;border-radius:4px;box-shadow:1px 1px 2px 0 rgba(0,0,0,0.05);overflow:hidden}section.profile section.content section.my-achievements>h3{margin:0;padding:15px 20px;font-size:18px;background-color:#f9f9f9}section.profile section.content section.my-achievements>h3 i{margin-right:5px;font-size:20px;color:#444}section.profile section.content section.my-achievements>ul>li{position:relative;padding:15px;margin-bottom:10px;border-bottom:1px solid #ebebeb;font-size:14px}section.profile
+*/

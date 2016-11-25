@@ -1,0 +1,41 @@
+
+{% extends "views/base.template" %}
+{% block content %}
+
+<div class="container">
+
+  <div >
+  <ol class="breadcrumb ">
+    <!-- <li><a href="/">Home</a><span class="glyphicon glyphicon-triangle-right"></span></li> -->
+    <li><a href="/">Home</a></li>
+    <li><a href="service">Service</a></li>
+    <li class="active">building</li>
+  </ol>
+  </div>
+<div class="row">
+  <div class="col-md-8">
+    <h1>Building</h1>
+    <img src="images/building.jpg" alt="Buiding" class="img-responsive img-rounded" />
+    <br>
+    <p>
+    Morula has the expertise in the following:
+    </p>
+  <ul>
+    <li>Residential building projects.</li>
+    <li>Commercial building projects.</li>
+    <li>Rural housing projects.</li>
+    <li>Small scale residential.</li>
+  </ul>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  </div>
+
+</div>
+</div>
+
+{% endblock %}
+

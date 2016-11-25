@@ -1,0 +1,195 @@
+
+
+{% extends "views/baseChat.template" %}
+{% block content %}
+<div class="container">
+  
+  
+
+
+
+           <div class="span6 offset3">
+           <h3 >Good day {{chat.displayName}} , welcome to SAMDP chatroom</h3>
+           <br>
+          
+            <div id="firechat-container" class="clearfix"></div>
+            <div id="user-info">
+              Logged in as <span id="user-name">.</span>
+              <a href="javascript:logout();">Logout</a>
+            </div>
+          </div>
+        
+    
+  
+
+<!-- <h1>Token is : {{token}}</h1> -->
+
+
+ 
+  
+
+  <div id="auth-modal" class="modal hide fade" tabindex="-1" role="dialog">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">×</button>
+      <h4 id="myModalLabel">Authenticate to continue</h4>
+    </div>
+    <div class="modal-body text-center">
+      <p>
+        <a id="google-signin" href="javascript:login();">
+          <img id="google-signin-btn" src="https://storage.googleapis.com/samdp-website.appspot.com/chat-room/public/images/sign-in-with-google.png">
+        </a>
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal">Cancel</button>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+  <!-- Firechat -->
+  <script src="https://storage.googleapis.com/samdp-website.appspot.com/chat-room/public/dist/firechat.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap-modal.min.js"></script>
+
+  <script>
+    // Initialize Firebase SDK
+var config = {
+    apiKey: "AIzaSyCt38injCXxS-hpDXWhtD53K6-WblWbOU4",
+    authDomain: "samdp-website.firebaseapp.com",
+    databaseURL: "https://samdp-website.firebaseio.com",
+    storageBucket: "samdp-website.appspot.com",
+    messagingSenderId: "705607693138"
+  };
+  firebase.initializeApp(config);
+  console.log("First");
+  var email= $('#my-data').data().other.split('@')[0];
+             console.log(email);
+    // Get a reference to the Firebase Realtime Database
+    var chatRef = firebase.database().ref(),    
+        target = document.getElementById("firechat-container"),
+        authModal = $('#auth-modal').modal({ show: false }),
+        chat = new FirechatUI(chatRef, target);
+        console.log("Third");
+             console.log($('#my-data').data().name);
+
+    chat.on('auth-required', function() {
+      console.log('Fourth');
+      // authModal.modal('show');
+      login();
+      console.log(' Fith');
+      return false;
+    });
+
+    firebase.auth().onAuthStateChanged(function(user) {
+       console.log('Sixth');
+      if (user) {
+        var userId = user.uid;
+        var email= $('#my-data').data().other.split('@')[0];
+        var domain=  $('#my-data').data().other.split('@')[1].split('.')[0];
+        var username=email+' '+domain;
+         // var  username = $('#my-data').data().name+' '+email;
+           console.log($('#my-data').data().other)
+             console.log("UID");
+             console.log(userId);
+             console.log("displayName");
+             console.log(username);
+        chat.setUser(userId, username);
+        $('#user-name').text(username);
+        $('#user-info').show();
+        setTimeout(function() {
+          chat._chat.enterRoom('-Iy1N3xs4kN8iALHV0QA')
+        }, 500);
+      } else {
+        $('#user-info').hide();
+        chat._chat.enterRoom('-Iy1N3xs4kN8iALHV0QA')
+      }
+    });
+
+    function login() {
+      authModal.modal('hide');
+     console.log("I am in the login function");
+    firebase.auth().signInWithCustomToken('{{chat.token|safe}}').catch(function(error) {
+      console.log('Login Failed!', error.code);
+      console.log('Error message: ', error.message);
+    });
+      // Log the user in via Google
+      // var provider = new firebase.auth.GoogleAuthProvider();
+      // firebase.auth().signInWithRedirect(provider);
+      // firebase.auth().signInWithPopup(provider).catch(function(error) {
+      //   console.log("Error authenticating user:", error);
+      // });
+    }
+
+    function logout() {
+      firebase.auth().signOut().then(function() {
+        location.reload();
+      }).catch(function(error) {
+        console.log("Error signing user out:", error);
+      });
+    }
+  </script>
+
+  <!-- Twitter / Facebook / Google -->
+  <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37102688-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  </div>
+
+
+<br>
+
+{% endblock %}
+
+
+
+
+
+
+
+<!-- <!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>SAMDP chat room</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SAMDP chat room ">
+  <meta name="author" content="Tebogo Sikwane">
+  <meta name="description" content="SAMDP chat room" />
+  <meta id="my-data"  data-name="{{nickname|safe}}" data-other="{{other}}">
+
+  <!-- Bootstrap -->
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" /> -->
+ <!--  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" />
+
+  <!-- Firechat -->
+  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/samdp-website.appspot.com/chat-room/public/dist/firechat.min.css" /> -->
+
+  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/samdp-website.appspot.com/chat-room/public/css/pygments-borland.css" /> -->
+  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/samdp-website.appspot.com/chat-room/public/css/styles.css" /> --> -->
+  <!-- <link href="/images/favicon.ico" rel="shortcut icon" /> -->
+<!-- </head> --> -->

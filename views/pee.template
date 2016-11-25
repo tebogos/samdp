@@ -1,0 +1,42 @@
+
+{% extends "views/base.template" %}
+{% block content %}
+
+<div class="container">
+  <div >
+  <ol class="breadcrumb ">
+    <!-- <li><a href="/">Home</a><span class="glyphicon glyphicon-triangle-right"></span></li> -->
+    <li><a href="/">Home</a></li>
+    <li><a href="service">Service</a></li>
+    <li class="active">Plant and Earthmoving Equipment</li>
+  </ol>
+  </div>
+
+<div class="row">
+  <div class="col-md-8">
+    <h1>Plant and Earthmoving Equipment</h1>
+    <br>
+    <img src="images/pee.jpg" alt="Buiding" />
+    <br>
+    <br>
+    <p>
+      Morula has the expertise in the following:
+    </p>
+    <ul>
+      <li>TLBs</li>
+      <li>Tipper Trucks.</li>
+      <li>Excavators.</li>
+      <li>Other small scale equipment.</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+
+</div>
+</div>
+
+{% endblock %}

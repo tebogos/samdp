@@ -1,0 +1,25 @@
+
+{% extends "views/base.template" %}
+{% block content %}
+
+<h3>Mange Users</h3>
+<hr>
+<div class="form-wrapper">
+<table class="table"> 
+<thead>
+      <tr >
+        <th>Username</th>
+        <th>ID Number</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for doctor in doctors %}
+
+       <tr scope="row"> <td><a href="user-details?email={{doctor.username}}">{{doctor.username}}</a></td> <td>{{ doctor.idNumber}}</td> <td>{{ doctor.status}}</td>    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+
+{% endblock %}

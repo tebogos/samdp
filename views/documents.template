@@ -1,0 +1,32 @@
+{% extends "views/base.template" %}
+{% block content %}
+
+ <div class="container">
+    <div >
+    <ol class="breadcrumb ">
+      <!-- <li><a href="/">Home</a><span class="glyphicon glyphicon-triangle-right"></span></li> -->
+      <li><a href="/">Home</a></li>
+      <li class="active">news</li>
+    </ol>
+    </div>
+ <div class="row">
+  <div class="col-md-8">
+    <h1>News</h1>
+    <br>
+    <br>
+  
+      <IFRAME FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SRC="http://www.medicinenet.com/script/main/getfeed.asp?hlbgcolor=ffffff&hlfontcolor=000000&bodybgcolor=ffffff&bordercolor=ffffff&feedid=0&itemcount=5" WIDTH=250 HEIGHT=250></IFRAME><BR><font size=1>Provided by <a href="http://www.medicinenet.com/script/main/hp.asp">MedicineNet</A></font>
+ 
+    <br>
+    <br>
+  </div>
+   </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+
+
+{% endblock %}

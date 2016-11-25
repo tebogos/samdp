@@ -1,0 +1,43 @@
+
+{% extends "views/base.template" %}
+{% block content %}
+
+<div class="container">
+  <div >
+  <ol class="breadcrumb ">
+    <!-- <li><a href="/">Home</a><span class="glyphicon glyphicon-triangle-right"></span></li> -->
+    <li><a href="/">Home</a></li>
+    <li><a href="service">Service</a></li>
+    <li class="active">Civil and Construction</li>
+  </ol>
+  </div>
+
+<div class="row">
+  <div class="col-md-6">
+    <h1>Civil Construction</h1>
+    <br>
+    <img src="images/civil1.jpg" alt="Civil" class="img-responsive img-rounded"/>
+    <br>
+    <br>
+  <p>
+    Morula has the expertise in the following:
+  </p>
+  <ul>
+    <li>Roads infrastructure.</li>
+    <li>Water reticulation.</li>
+    <li>Bulk water pipelines.</li>
+    <li>Dam raising.</li>
+  </ul>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  </div>
+
+</div>
+</div>
+
+{% endblock %}

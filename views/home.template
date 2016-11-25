@@ -1,0 +1,77 @@
+{% extends "views/baseHome.template" %}
+{% block content %}
+
+  <!-- <div class="jumbotron">
+    <div class="container">
+      <h1></h1>
+      <p>
+
+
+
+      </p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button"> tr("Learn more {raquo}"</a></p>
+    </div>
+  </div> -->
+
+  <div class="row" >
+
+  </div>
+    <div class="container">
+      <br>
+      <br>
+<img src="https://storage.googleapis.com/samdp-website.appspot.com/images/samdplogo.png" />
+<div class="row">
+  <div class="col-md-8">
+    <h3>Welcome to SAMDP's official website</h3>
+    <p>
+    The South African Medical and Dental Practitioners Association (SAMDP) is a national body of predominantly medical and dental practitioners working in disadvantaged and underserved communities, which was established in 1989 and incorporated as a non-profit company in 1997
+    </p>
+
+  
+
+  </div>
+
+</div>
+
+      <div class="row">
+        <div class="col-md-6 col-xs-6">
+          <h3>Blue Wave</h3>
+          <br>
+          <img alt="Blue Wave" src="https://storage.googleapis.com/samdp-website.appspot.com/images/blue%20wave.png" class="img-responsive img-rounded img-float-left" />
+          <br>
+         <p class="left-padding"> 
+          Democratization of South Africa has led to the need to further define the role of SAMDP. The promulgation of the Black Economic Empowerment Act, Code of Practice and the health charter, are designed to address previous disempowerment mechanisms. SAMDP Investments is guided by a business strategy that entails active participation and partnership with strategy players in the economy by acquiring equity investments in profitable corporate ventures to ensure growth. SGH also aims to engage in operational activities with strategic partners that operate within the healthcare and related industries to achieve human resource development, skills transfer and mentoring.
+         </p> 
+
+<a href="blue-wave" class="btn btn-primary btn-xs" role="button">Learn more...</a>
+        </div>
+        <div class="col-md-6 col-xs-6">
+          <h3>SGH</h3>
+          <br>
+            <img alt="SHG" src="https://storage.googleapis.com/samdp-website.appspot.com/images/sgh118x170.png"  class="img-responsive img-rounded img-float-left"/>
+            <br>
+          <p class="left-padding">
+              The SAMDP Investments philosophy is to provide financial empowerment and independence as well as wealth creation for its members and shareholders. The primary objectives of SGH are: 
+          </p>
+          <ul class="left-padding">
+            <li>To identify and invest in businesses with growth potential.</li>
+            <li>To play a meaningful role in the economic and development agenda of South Africa.</li>
+            <li> To be innovative and to add value by identifying opportunities not yet addressed by the market.</li>
+            <li>To participate actively in strategic and operations management of business opportunities identified.</li>
+            <li>To be responsive and deliver high quality of service to our clients.</li>
+            <li>To develop human capital ensuring adherence to national equity policies. </li>
+          </ul>
+         <a href="sgh" class="btn btn-primary btn-xs" role="button">Learn more...</a>
+
+        </div>
+       </div>
+
+      </div>
+
+      <hr>
+
+
+    </div> <!-- /container -->
+
+   {% endblock %} 
+

@@ -1,0 +1,85 @@
+
+{% extends "views/base.template" %}
+{% block content %}
+
+<!-- <div class="jumbotron">
+    <div class="container">
+      <h1>Hello, world!</h1>
+      <p>
+      This is a template for a simple marketing or informational website."
+      It includes a large callout called a jumbotron and three supporting pieces of content."
+      "Use it as a starting point to create something more unique."
+      </p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button"> tr("Learn more {raquo}"</a></p>
+    </div>
+  </div> -->
+
+  <div class="container">
+    <div >
+    <ol class="breadcrumb ">
+      <!-- <li><a href="/">Home</a><span class="glyphicon glyphicon-triangle-right"></span></li> -->
+      <li><a href="/">Home</a></li>
+      <li class="active">Service</li>
+    </ol>
+    </div>
+      <h1>Services</h1>
+        <h3> we offer the services listed below</h3>
+        <div class="row">
+          <div class="col-md-3 col-xs-6">
+            <h3>Building</h3>
+            <br>
+            <img alt="bulding" src="images/building.jpg" class="img-responsive img-rounded" />
+            <br>
+            <ul>
+              <li  >Commercial property development.</li>
+              <li>Residential property development.</li>
+            </ul>
+
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <h3>Civil construction</h3>
+            <br>
+              <img alt="bulding" src="images/civil1.jpg"  class="img-responsive img-rounded"/>
+              <br>
+            <ul>
+              <li>Civil construction.</li>
+              <li>Municipal infrastructure.</li>
+              <li>Water Reticulation.</li>
+              <li>Bulk Water infrastructure.</li>
+              <li>Waste water infrastructure.</li>
+            </ul>
+
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <h3>Plant and Earthmoving Equipment</h3>
+            <br>
+            <img alt="Plant and Earthmoving Equipment" src="images/pee.jpg"  class="img-responsive img-rounded"/>
+            <br>
+            <p>
+              Morula sources plant and equipment for utilisation on its projects and supports small emerging contractors with plant and equipment for their needs.
+            </p>
+
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <h3>Consulting</h3>
+            <br>
+            <img alt="Consulting" src="images/consulting1.jpg"  class="img-responsive img-rounded"/>
+            <br>
+            <ul>
+              <li  >Project risk management</li>
+              <li>Cost and budget analysis</li>
+              <li>Technical consultancy</li>
+            </ul>
+
+
+          </div>
+          </div>
+    </div>
+
+    <hr>
+
+
+  </div> <!-- /container -->
+
+{% endblock %}
+

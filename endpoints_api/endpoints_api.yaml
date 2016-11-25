@@ -1,0 +1,19 @@
+application: cpd200-nuggets
+version: endpoints-001
+module: endpointsapi
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /_ah/spi/.*
+  script: endpoints_api.app
+  secure: always
+  
+  
+libraries:
+- name: endpoints
+  version: 1.0
+  
+
+  

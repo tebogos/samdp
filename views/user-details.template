@@ -1,0 +1,124 @@
+
+
+{% extends "views/base.template" %}
+{% block content %}
+
+  <section class="profile container">
+    <div class="intro">
+      <h2>Change user status</h2>
+      
+    </div>
+
+    <!-- Content -->
+
+    
+        <div class="form-wrapper">
+         
+
+          <div class="profile-info-body">
+            <form data-toggle="validator" role="form" name="user-details" method="post" action="/user-details">
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" name="username" value="{{ doctor.username }}"></input>
+              </div>
+
+              <div class="form-group">
+                <label for="notifyEmail">Email:</label>
+                <input type="email" class="form-control" name="notifyEmail" value="{{ doctor.notifyEmail }}" disabled ></input>
+              </div>
+
+              <div class="form-group">
+                <label for="bio">Bio:</label>
+                <textarea  class="form-control" name="bio" disabled >{{ doctor.bio }} </textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="designation">Designation</label>
+              <input type="text" class="form-control" name="designation" value="{{ doctor.designation }}" disabled ></input>              
+              </div>
+              <div class="form-group" >
+                <label for="Field">Field</label>
+                <select  class="form-control" disabled>
+                 <option value="MD" >MD</option>
+                 <option value="dentist">Dentist</option>
+                </select> 
+              </div>
+              <div class="form-group" >
+                <label for="Specializatioin">Specializatioin</label>
+                <select  class="form-control" disabled >
+                 <option value="general practitioner" >General Practitioner</option>
+                 <option value="heart surgent">Heart Surgent</option>
+                 <option value="surgent">Surgent</option>
+                </select> 
+              </div>
+              
+              <div class="form-group">
+                <label for="idNumber">Id Number</label>
+              <input type="text" class="form-control" name="idNumber" value="{{ doctor.idNumber }}" disabled ></input>              
+              </div>
+  
+               <div class="form-group">
+                  <label for="province">Province</label>
+                  <select name="province" class="form-control" disabled >
+                    <option value="Gauteng">Gauteng</option>
+                    <option value="KZN">KZN</option>
+                    <option value="Cape">Cape</option>
+                    <option value="Northen Cape">Northen Cape</option>
+                    <option value="North West">North West<option>
+                  </select> 
+              </div>
+           
+                <div  class="form-group">
+                <label for="city">City</label>
+                <select name="city" class="form-control" disabled >
+                  <option value="Johannesburg">Johannesburg</option>
+                  <option value="Cape Town">Cape Town</option>
+                  <option value="Durban">Durban</option>
+                  <option value="Tshwane">Tshwane</option>
+                </select>
+              </div>
+
+               <div class="form-group">
+                <label for="ethnicGroup">ethnicGroup</label>
+              <select name="ethnicGroup" class="form-control" disabled >
+                <option value="Africa">African</option>
+                <option value="Indian">Indian</option>
+                <option value="Caucasian">Caucasian</option>
+                <option value="Coloured">Coloured</option>
+              </select>       
+              </div>
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" name="gender" disabled >
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+             <div class="form-group">
+               <label for="Contact">Contact Number</label>
+               <input type="text" class="form-control" name="contactNumber" value="{{ doctor.contactNumber }}" disabled ></input>
+             </div>
+              <div class="form-group">
+               <label for="mobileNumber">Mobile Number</label>
+               <input type="text" class="form-control" name="mobileNumber" value="{{ mobileNumber }}" disabled ></input>
+             </div>
+             <div class="form-group"> 
+                 <label for="status">Status</status>
+                 <select name="status" id="status" class="form-control" >
+                     <option value="active">active</option>
+                     <option value="suspended">suspended</option>
+                     <option value="canceled">canceled</option>
+                 </select>
+             </div>
+
+                  
+
+              <button type="submit">Update</button>
+            </form>
+          </div>
+        </div>
+
+    
+
+
+{% endblock %}
